@@ -1,7 +1,6 @@
 """
 Process the JSON file named school_data.json. Display only those schools 
-that are part of the ACC, Big 12, Big Ten, Pac-12 and SEC divisons. This
-information can be found in the ValueLabels file.
+that are part of the ACC, Big 12, Big Ten, Pac-12 and SEC divisons.
 
 Copy that info here:
 
