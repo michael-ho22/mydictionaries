@@ -15,7 +15,7 @@ room-number,use,sq-ft,price
 
 '''
 
-
+import csv
 
 
 datastore = { "medical":[
@@ -47,3 +47,30 @@ datastore = { "medical":[
 
       ]
 }
+
+outfile = open('retail_space.csv', 'w')
+outfile.write('room-number,use,sq-ft,price\n')
+
+list_of_dictionaries = datastore['medical']
+
+for a_dictionary in list_of_dictionaries:
+    room = a_dictionary['room-number']
+    use = a_dictionary['use']
+    sqft = a_dictionary['sq-ft']
+    price = a_dictionary['price']
+
+    outfile.write(f'{room},{use},{sqft},{price}\n')
+
+outfile.close()
+# retail_space.write('room-number,use,sq-ft,price\n')
+
+# total = 0
+# for v in datastore.values():
+#     for values in v:
+#         for num in values.values():
+#             if total < 4:
+#               retail_space.write(f'{num}, ')
+#               total += 1
+#             elif total > 4:
+#               total = 0
+#               retail_space.write('\n')
