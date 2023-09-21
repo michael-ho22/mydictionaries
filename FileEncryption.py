@@ -36,11 +36,11 @@ encrypted = open('encrypted.txt', 'w')
 text = infile.read()
 
 new_txt = ''
-for word in text:
-    if word in codes:
-        new_txt += codes[word]
+for letter in text:
+    if letter in codes:
+        new_txt += codes[letter]
     else:
-        new_txt += word
+        new_txt += letter
 
 encrypted.write(new_txt)
 
